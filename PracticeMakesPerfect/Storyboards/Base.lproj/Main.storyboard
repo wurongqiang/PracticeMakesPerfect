@@ -38,10 +38,10 @@
             </objects>
             <point key="canvasLocation" x="1515.9420289855075" y="390.40178571428572"/>
         </scene>
-        <!--List View Controller-->
+        <!--Post List View Controller-->
         <scene sceneID="Q1Z-lt-Stn">
             <objects>
-                <viewController id="J5p-li-D0h" customClass="ListViewController" customModule="PracticeMakesPerfect" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="J5p-li-D0h" customClass="PostListViewController" customModule="PracticeMakesPerfect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fHh-Ru-csG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,8 +57,8 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                                 <connections>
-                                    <outlet property="dataSource" destination="J5p-li-D0h" id="0Oz-NU-vtV"/>
-                                    <outlet property="delegate" destination="J5p-li-D0h" id="0Hr-N8-Kn8"/>
+                                    <outlet property="dataSource" destination="J5p-li-D0h" id="h3P-1l-iFf"/>
+                                    <outlet property="delegate" destination="J5p-li-D0h" id="YNX-oH-cZ5"/>
                                 </connections>
                             </collectionView>
                         </subviews>
@@ -73,7 +73,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="O8x-fa-y3y"/>
                     <connections>
-                        <outlet property="listCollectionView" destination="rg2-rh-qXe" id="Rxr-Ag-XiC"/>
+                        <outlet property="postListCollectionView" destination="rg2-rh-qXe" id="vTM-oH-gng"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ggD-9g-pzk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -98,11 +98,11 @@
             </objects>
             <point key="canvasLocation" x="-312" y="67"/>
         </scene>
-        <!--List-->
+        <!--Post-->
         <scene sceneID="auc-Ev-VLJ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sgN-gm-tlq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="List" id="Fh8-zo-sPk"/>
+                    <tabBarItem key="tabBarItem" title="Post" id="Fh8-zo-sPk"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="O3b-mt-vPK">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

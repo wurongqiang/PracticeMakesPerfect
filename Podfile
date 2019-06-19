@@ -6,6 +6,18 @@ target 'PracticeMakesPerfect' do
   use_frameworks!
 
   # Pods for PracticeMakesPerfect
-  pod 'R.swift', '5.0.0'
-
+  pod 'RealmSwift'
+  
+  pod 'SegueManager'
+  pod 'SegueManager/R.swift'
+  
+  pod 'Swinject'
+  pod 'SwinjectStoryboard'
+  
+  pod 'RxAlamofire'
+  pod 'ObjectMapper'
+  pod 'Kingfisher'
+  pod 'SwiftDate'
+  
+  pod 'RxSwift'
 end
