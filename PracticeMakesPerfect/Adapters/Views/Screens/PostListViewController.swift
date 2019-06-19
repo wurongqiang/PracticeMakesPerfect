@@ -35,7 +35,13 @@ class PostListViewController: UIViewController, UICollectionViewDataSource, UICo
     override func viewDidLoad() {
         setupPostListViewModel()
         
+        registerCollectionViewCellNib()
         postListViewModel.viewLoad()
+    }
+    
+    private func registerCollectionViewCellNib() {
+        let nib = UINib(nibName: "PostCollectionViewCell", bundle: nil)
+        postListCollectionView.register(nib, forCellWithReuseIdentifier: "PostListCollectionViewCell")
     }
     
     private func setupPostListViewModel() {

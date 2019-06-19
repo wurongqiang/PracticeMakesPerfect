@@ -14,12 +14,14 @@ class PostViewParam {
     var userId = 0
     var title = ""
     var body = ""
+    var image = URL(string: "")
     
-    init(id: Int, userId: Int, title: String, body: String) {
+    init(id: Int, userId: Int, title: String, body: String, image: URL) {
         self.id = id
         self.userId = userId
         self.title = title
         self.body = body
+        self.image = image
     }
     
 }

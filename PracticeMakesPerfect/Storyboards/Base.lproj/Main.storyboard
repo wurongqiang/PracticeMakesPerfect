@@ -18,8 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFx-qc-yzi">
-                                <rect key="frame" x="182.5" y="437.5" width="49" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QhR-3g-glP">
+                                <rect key="frame" x="301" y="437.5" width="63" height="21"/>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profle 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFx-qc-yzi">
+                                <rect key="frame" x="50" y="437.5" width="57" height="21"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -27,7 +35,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="xFx-qc-yzi" firstAttribute="centerX" secondItem="iSd-Dy-ozz" secondAttribute="centerX" id="9G2-cC-GN6"/>
+                            <constraint firstItem="QhR-3g-glP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xFx-qc-yzi" secondAttribute="trailing" constant="50" id="8BE-Sk-uz7"/>
+                            <constraint firstItem="xFx-qc-yzi" firstAttribute="leading" secondItem="3Qf-jr-Ssi" secondAttribute="leading" constant="50" id="UWp-g6-uKy"/>
+                            <constraint firstItem="3Qf-jr-Ssi" firstAttribute="trailing" secondItem="QhR-3g-glP" secondAttribute="trailing" constant="50" id="Vkx-0T-nrz"/>
+                            <constraint firstItem="QhR-3g-glP" firstAttribute="centerY" secondItem="iSd-Dy-ozz" secondAttribute="centerY" id="bud-RS-zPD"/>
                             <constraint firstItem="xFx-qc-yzi" firstAttribute="centerY" secondItem="iSd-Dy-ozz" secondAttribute="centerY" id="fBB-SU-bkX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3Qf-jr-Ssi"/>
