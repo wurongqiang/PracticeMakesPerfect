@@ -7,21 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F11E35F6B4400B75257178EA /* Pods_PracticeMakesPerfect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14DB7EFA9BBF8B5651D70493 /* Pods_PracticeMakesPerfect.framework */; };
 		F650B36922B9ED5000E2D323 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F650B36822B9ED5000E2D323 /* AppDelegate.swift */; };
-		F650B36B22B9ED5000E2D323 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F650B36A22B9ED5000E2D323 /* ViewController.swift */; };
+		F650B36B22B9ED5000E2D323 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F650B36A22B9ED5000E2D323 /* ListViewController.swift */; };
 		F650B36E22B9ED5000E2D323 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F650B36C22B9ED5000E2D323 /* Main.storyboard */; };
 		F650B37022B9ED5200E2D323 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F650B36F22B9ED5200E2D323 /* Assets.xcassets */; };
 		F650B37322B9ED5200E2D323 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F650B37122B9ED5200E2D323 /* LaunchScreen.storyboard */; };
+		F6D148C022BA32A1006A9C13 /* PostListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D148BF22BA32A1006A9C13 /* PostListTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14DB7EFA9BBF8B5651D70493 /* Pods_PracticeMakesPerfect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PracticeMakesPerfect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49CFDA4CA5D5B7B34B098588 /* Pods-PracticeMakesPerfect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeMakesPerfect.release.xcconfig"; path = "Target Support Files/Pods-PracticeMakesPerfect/Pods-PracticeMakesPerfect.release.xcconfig"; sourceTree = "<group>"; };
+		F5DF620E47CA6335EDAA65A1 /* Pods-PracticeMakesPerfect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeMakesPerfect.debug.xcconfig"; path = "Target Support Files/Pods-PracticeMakesPerfect/Pods-PracticeMakesPerfect.debug.xcconfig"; sourceTree = "<group>"; };
 		F650B36522B9ED5000E2D323 /* PracticeMakesPerfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticeMakesPerfect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F650B36822B9ED5000E2D323 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F650B36A22B9ED5000E2D323 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F650B36A22B9ED5000E2D323 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		F650B36D22B9ED5000E2D323 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F650B36F22B9ED5200E2D323 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F650B37222B9ED5200E2D323 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F650B37422B9ED5200E2D323 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6D148BF22BA32A1006A9C13 /* PostListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F11E35F6B4400B75257178EA /* Pods_PracticeMakesPerfect.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1EF87FACEB6922233D0D8155 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F5DF620E47CA6335EDAA65A1 /* Pods-PracticeMakesPerfect.debug.xcconfig */,
+				49CFDA4CA5D5B7B34B098588 /* Pods-PracticeMakesPerfect.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A1719F0CFFE5F669C4D17E22 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				14DB7EFA9BBF8B5651D70493 /* Pods_PracticeMakesPerfect.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F650B35C22B9ED5000E2D323 = {
 			isa = PBXGroup;
 			children = (
 				F650B36722B9ED5000E2D323 /* PracticeMakesPerfect */,
 				F650B36622B9ED5000E2D323 /* Products */,
+				1EF87FACEB6922233D0D8155 /* Pods */,
+				A1719F0CFFE5F669C4D17E22 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,7 +86,6 @@
 				F6D148B922BA28C8006A9C13 /* Assets */,
 				F6D148B722BA24D7006A9C13 /* Storyboards */,
 				F6D148BA22BA28F5006A9C13 /* Adapters */,
-				F650B36A22B9ED5000E2D323 /* ViewController.swift */,
 			);
 			path = PracticeMakesPerfect;
 			sourceTree = "<group>";
@@ -100,6 +126,7 @@
 		F6D148BB22BA2906006A9C13 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F6D148BD22BA3227006A9C13 /* Components */,
 				F6D148BC22BA290E006A9C13 /* Screens */,
 			);
 			path = Views;
@@ -108,8 +135,25 @@
 		F6D148BC22BA290E006A9C13 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				F650B36A22B9ED5000E2D323 /* ListViewController.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		F6D148BD22BA3227006A9C13 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F6D148BE22BA3230006A9C13 /* Views */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F6D148BE22BA3230006A9C13 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F6D148BF22BA32A1006A9C13 /* PostListTableView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,9 +163,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F650B37722B9ED5200E2D323 /* Build configuration list for PBXNativeTarget "PracticeMakesPerfect" */;
 			buildPhases = (
+				9718893414975C763A1BDFD2 /* [CP] Check Pods Manifest.lock */,
 				F650B36122B9ED5000E2D323 /* Sources */,
 				F650B36222B9ED5000E2D323 /* Frameworks */,
 				F650B36322B9ED5000E2D323 /* Resources */,
+				1104156DE5B7C790502B391B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -178,12 +224,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1104156DE5B7C790502B391B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PracticeMakesPerfect/Pods-PracticeMakesPerfect-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PracticeMakesPerfect/Pods-PracticeMakesPerfect-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PracticeMakesPerfect/Pods-PracticeMakesPerfect-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9718893414975C763A1BDFD2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PracticeMakesPerfect-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F650B36122B9ED5000E2D323 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F650B36B22B9ED5000E2D323 /* ViewController.swift in Sources */,
+				F650B36B22B9ED5000E2D323 /* ListViewController.swift in Sources */,
+				F6D148C022BA32A1006A9C13 /* PostListTableView.swift in Sources */,
 				F650B36922B9ED5000E2D323 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,6 +417,7 @@
 		};
 		F650B37822B9ED5200E2D323 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5DF620E47CA6335EDAA65A1 /* Pods-PracticeMakesPerfect.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -346,6 +436,7 @@
 		};
 		F650B37922B9ED5200E2D323 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49CFDA4CA5D5B7B34B098588 /* Pods-PracticeMakesPerfect.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
