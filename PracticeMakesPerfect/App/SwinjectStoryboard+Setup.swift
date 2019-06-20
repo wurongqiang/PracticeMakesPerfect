@@ -19,6 +19,8 @@ extension SwinjectStoryboard {
         registerInteractors()
         
         registerApis()
+        
+        registerStorages()
     }
     
     class func resolveDefault<Service>(_ service: Service.Type) -> Service? {
@@ -39,7 +41,7 @@ extension SwinjectStoryboard {
     
     private class func registerInteractors() {
         defaultContainer.register(DisplayPosts.self) { r in
-            DisplayPostsImpl(postApi: r.resolve(PostApi.self)!)
+            DisplayPostsImpl(postApi: r.resolve(PostApi.self)!, postStorage: r.resolve(PostsStorage.self)!)
         }
     }
     
@@ -50,6 +52,12 @@ extension SwinjectStoryboard {
         
         defaultContainer.register(PostApi.self) { r in
             PostApiImpl(practiceMakesPerfectApiClient: r.resolve(PracticeMakesPerfectApiClient.self)!)
+        }
+    }
+    
+    private class func registerStorages() {
+        defaultContainer.register(PostsStorage.self) { r in
+            PostsRealmStorage()
         }
     }
     

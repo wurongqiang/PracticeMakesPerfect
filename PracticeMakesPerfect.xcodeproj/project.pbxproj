@@ -18,6 +18,8 @@
 		F6B0DC9022BA7DBB00E980CF /* PracticeMakesPerfectApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B0DC8F22BA7DBB00E980CF /* PracticeMakesPerfectApiClient.swift */; };
 		F6C054DA22BB7FAD001104AD /* PostApiImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C054D922BB7FAD001104AD /* PostApiImpl.swift */; };
 		F6C054DC22BB8146001104AD /* PostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C054DB22BB8146001104AD /* PostResponse.swift */; };
+		F6C054DF22BB8B1A001104AD /* RealmStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C054DE22BB8B1A001104AD /* RealmStorage.swift */; };
+		F6C054E122BB91D0001104AD /* PostsRealmStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C054E022BB91D0001104AD /* PostsRealmStorage.swift */; };
 		F6D148C022BA32A1006A9C13 /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D148BF22BA32A1006A9C13 /* PostCollectionViewCell.swift */; };
 		F6D148C322BA3829006A9C13 /* PostListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D148C222BA3829006A9C13 /* PostListViewModel.swift */; };
 		F6D148C722BA38A7006A9C13 /* PostViewParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D148C622BA38A7006A9C13 /* PostViewParam.swift */; };
@@ -41,6 +43,8 @@
 		F6B0DC8F22BA7DBB00E980CF /* PracticeMakesPerfectApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeMakesPerfectApiClient.swift; sourceTree = "<group>"; };
 		F6C054D922BB7FAD001104AD /* PostApiImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostApiImpl.swift; sourceTree = "<group>"; };
 		F6C054DB22BB8146001104AD /* PostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostResponse.swift; sourceTree = "<group>"; };
+		F6C054DE22BB8B1A001104AD /* RealmStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmStorage.swift; sourceTree = "<group>"; };
+		F6C054E022BB91D0001104AD /* PostsRealmStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsRealmStorage.swift; sourceTree = "<group>"; };
 		F6D148BF22BA32A1006A9C13 /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
 		F6D148C222BA3829006A9C13 /* PostListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewModel.swift; sourceTree = "<group>"; };
 		F6D148C622BA38A7006A9C13 /* PostViewParam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewParam.swift; sourceTree = "<group>"; };
@@ -144,6 +148,15 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		F6C054DD22BB8B06001104AD /* Storages */ = {
+			isa = PBXGroup;
+			children = (
+				F6C054DE22BB8B1A001104AD /* RealmStorage.swift */,
+				F6C054E022BB91D0001104AD /* PostsRealmStorage.swift */,
+			);
+			path = Storages;
+			sourceTree = "<group>";
+		};
 		F6D148B722BA24D7006A9C13 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +186,7 @@
 		F6D148BA22BA28F5006A9C13 /* Adapters */ = {
 			isa = PBXGroup;
 			children = (
+				F6C054DD22BB8B06001104AD /* Storages */,
 				F6B0DC8E22BA7DA100E980CF /* ApiServices */,
 				F6D148C122BA3809006A9C13 /* ViewModels */,
 				F6D148BB22BA2906006A9C13 /* Views */,
@@ -370,11 +384,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6C054E122BB91D0001104AD /* PostsRealmStorage.swift in Sources */,
 				F6C054DA22BB7FAD001104AD /* PostApiImpl.swift in Sources */,
 				F650B36B22B9ED5000E2D323 /* PostListViewController.swift in Sources */,
 				F6D148C022BA32A1006A9C13 /* PostCollectionViewCell.swift in Sources */,
 				F6C054DC22BB8146001104AD /* PostResponse.swift in Sources */,
 				F6B0DC9022BA7DBB00E980CF /* PracticeMakesPerfectApiClient.swift in Sources */,
+				F6C054DF22BB8B1A001104AD /* RealmStorage.swift in Sources */,
 				F6D148C322BA3829006A9C13 /* PostListViewModel.swift in Sources */,
 				F6D148CD22BA3A46006A9C13 /* DisplayPosts.swift in Sources */,
 				F6D148CA22BA39D0006A9C13 /* Post.swift in Sources */,
