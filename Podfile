@@ -20,4 +20,7 @@ target 'PracticeMakesPerfect' do
   pod 'SwiftDate', '6.0.3'
   
   pod 'RxSwift', '5.0.0'
+  
+  pod 'Reveal-SDK'
+  
 end
