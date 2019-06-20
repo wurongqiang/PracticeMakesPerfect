@@ -14,5 +14,6 @@ class Post {
     var userId = 0
     var title = ""
     var body = ""
+    var imageURL = ""
     
 }

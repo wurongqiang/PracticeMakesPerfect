@@ -39,12 +39,18 @@ extension SwinjectStoryboard {
     
     private class func registerInteractors() {
         defaultContainer.register(DisplayPosts.self) { r in
-            DisplayPostsImpl()
+            DisplayPostsImpl(postApi: r.resolve(PostApi.self)!)
         }
     }
     
     private class func registerApis() {
+        defaultContainer.register(PracticeMakesPerfectApiClient.self) { r in
+            PracticeMakesPerfectApiClientImpl()
+        }
         
+        defaultContainer.register(PostApi.self) { r in
+            PostApiImpl(practiceMakesPerfectApiClient: r.resolve(PracticeMakesPerfectApiClient.self)!)
+        }
     }
     
 }
