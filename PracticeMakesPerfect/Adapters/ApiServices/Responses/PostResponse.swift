@@ -30,6 +30,7 @@ class PostResponse: Mappable {
         let post = Post()
         post.id = id
         post.userId = userId
+        post.title = title
         post.body = body
         post.imageURL = imageURL
         return post

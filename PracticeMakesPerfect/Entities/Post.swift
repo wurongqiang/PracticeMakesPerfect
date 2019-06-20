@@ -11,11 +11,11 @@ import RealmSwift
 
 class Post: Object {
     
-    dynamic var id = 0
-    dynamic var userId = 0
-    dynamic var title = ""
-    dynamic var body = ""
-    dynamic var imageURL = ""
+    @objc dynamic var id = 0
+    @objc dynamic var userId = 0
+    @objc dynamic var title = ""
+    @objc dynamic var body = ""
+    @objc dynamic var imageURL = ""
     
     override static func primaryKey() -> String? {
         return "id"
