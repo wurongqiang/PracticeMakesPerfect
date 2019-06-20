@@ -27,7 +27,6 @@ class RealmStorage {
     class func initializeRealm() {
         let config = Realm.Configuration(
             schemaVersion: RealmStorage.dbVersion,
-            
             migrationBlock: { migration, oldSchemaVersion in
                 if (oldSchemaVersion < RealmStorage.dbVersion) {
                     //auto upgrade

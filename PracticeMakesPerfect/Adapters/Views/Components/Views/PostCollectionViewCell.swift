@@ -12,8 +12,6 @@ import Kingfisher
 
 class PostCollectionViewCell: UICollectionViewCell {
     
- 
-    
     @IBOutlet weak var pictureImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!

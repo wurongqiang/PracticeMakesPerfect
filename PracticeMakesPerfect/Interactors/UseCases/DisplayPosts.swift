@@ -25,13 +25,20 @@ class DisplayPostsImpl: DisplayPosts {
     }
     
     func getPosts() -> Observable<[PostViewParam]> {
-        guard postsStorage.getPosts().isEmpty else {
-            defer {
-                getAllPostsFromServer().subscribe(onNext: { _ in }).disposed(by: disposeBag)
-            }
-            return Observable.just(PostViewParam.create(posts: postsStorage.getPosts()))
+        let postsFromCache = getAllPostsFromCache()
+        let postsFromServer = getAllPostsFromServer()
+        
+        return Observable.of(postsFromCache, postsFromServer).merge()
+    }
+    
+    private func getAllPostsFromCache() -> Observable<[PostViewParam]> {
+        let posts = postsStorage.getPosts()
+        guard !posts.isEmpty else {
+            return Observable.empty()
         }
-        return getAllPostsFromServer()
+        let postViewParams = PostViewParam.create(posts: posts)
+        
+        return .just(postViewParams)
     }
     
     private func getAllPostsFromServer() -> Observable<[PostViewParam]> {

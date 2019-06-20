@@ -11,8 +11,8 @@ import ObjectMapper
 
 class PostResponse: Mappable {
     
-    var id = 0
-    var userId = 0
+    var id = ""
+    var userId = ""
     var title = ""
     var body = ""
     var imageURL = ""
@@ -28,8 +28,8 @@ class PostResponse: Mappable {
     
     func toPost() -> Post {
         let post = Post()
-        post.id = id
-        post.userId = userId
+        post.id = Int(id)!
+        post.userId = Int(userId)!
         post.title = title
         post.body = body
         post.imageURL = imageURL
