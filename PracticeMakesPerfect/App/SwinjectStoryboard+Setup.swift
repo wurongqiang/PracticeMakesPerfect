@@ -31,11 +31,19 @@ extension SwinjectStoryboard {
         defaultContainer.storyboardInitCompleted(PostListViewController.self) { r, c in
             c.postListViewModel = r.resolve(PostListViewModel.self)!
         }
+        
+        defaultContainer.storyboardInitCompleted(PostDetailViewController.self) { r, c in
+            c.postDetailViewModel = r.resolve(PostDetailViewModel.self)!
+        }
     }
     
     private class func registerViewModels() {
         defaultContainer.register(PostListViewModel.self) { r in
             PostListViewModel(displayPosts: r.resolve(DisplayPosts.self)!)
+        }
+        
+        defaultContainer.register(PostDetailViewModel.self) { r in
+            PostDetailViewModel()
         }
     }
     

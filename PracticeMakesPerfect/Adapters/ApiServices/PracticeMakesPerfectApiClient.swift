@@ -52,7 +52,7 @@ class PracticeMakesPerfectApiClientImpl: PracticeMakesPerfectApiClient {
     private func populateHeaders(
         dict: [String:String]? = nil) -> [String:String] {
         var headers = [String:String]()
-        headers["Authorization"] = "Bearer n2QQmJ555hBU-AReT74ML6RIS1cJ5KG5RqcT"
+        headers["Authorization"] = "Bearer wlQqC4R2In_tUdl-hPnMNyYbDyvOrn9xb0iW"
         
         if let dict = dict {
             for (k, v) in dict where !k.isEmpty {

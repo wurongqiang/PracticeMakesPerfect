@@ -20,6 +20,9 @@
 		F6C054DC22BB8146001104AD /* PostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C054DB22BB8146001104AD /* PostResponse.swift */; };
 		F6C054DF22BB8B1A001104AD /* RealmStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C054DE22BB8B1A001104AD /* RealmStorage.swift */; };
 		F6C054E122BB91D0001104AD /* PostsRealmStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C054E022BB91D0001104AD /* PostsRealmStorage.swift */; };
+		F6C054E322BBB718001104AD /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C054E222BBB718001104AD /* PostDetailViewController.swift */; };
+		F6C054E522BBB892001104AD /* PostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C054E422BBB892001104AD /* PostDetailViewModel.swift */; };
+		F6C054EB22BBC449001104AD /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C054EA22BBC448001104AD /* R.generated.swift */; };
 		F6D148C022BA32A1006A9C13 /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D148BF22BA32A1006A9C13 /* PostCollectionViewCell.swift */; };
 		F6D148C322BA3829006A9C13 /* PostListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D148C222BA3829006A9C13 /* PostListViewModel.swift */; };
 		F6D148C722BA38A7006A9C13 /* PostViewParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D148C622BA38A7006A9C13 /* PostViewParam.swift */; };
@@ -45,6 +48,9 @@
 		F6C054DB22BB8146001104AD /* PostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostResponse.swift; sourceTree = "<group>"; };
 		F6C054DE22BB8B1A001104AD /* RealmStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmStorage.swift; sourceTree = "<group>"; };
 		F6C054E022BB91D0001104AD /* PostsRealmStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsRealmStorage.swift; sourceTree = "<group>"; };
+		F6C054E222BBB718001104AD /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
+		F6C054E422BBB892001104AD /* PostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModel.swift; sourceTree = "<group>"; };
+		F6C054EA22BBC448001104AD /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		F6D148BF22BA32A1006A9C13 /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
 		F6D148C222BA3829006A9C13 /* PostListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewModel.swift; sourceTree = "<group>"; };
 		F6D148C622BA38A7006A9C13 /* PostViewParam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewParam.swift; sourceTree = "<group>"; };
@@ -110,6 +116,7 @@
 				F6D148C422BA388A006A9C13 /* Interactors */,
 				F6D148BA22BA28F5006A9C13 /* Adapters */,
 				F6D148C822BA39B9006A9C13 /* Entities */,
+				F6C054E922BBC3DD001104AD /* Libraries */,
 			);
 			path = PracticeMakesPerfect;
 			sourceTree = "<group>";
@@ -155,6 +162,14 @@
 				F6C054E022BB91D0001104AD /* PostsRealmStorage.swift */,
 			);
 			path = Storages;
+			sourceTree = "<group>";
+		};
+		F6C054E922BBC3DD001104AD /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				F6C054EA22BBC448001104AD /* R.generated.swift */,
+			);
+			path = Libraries;
 			sourceTree = "<group>";
 		};
 		F6D148B722BA24D7006A9C13 /* Storyboards */ = {
@@ -207,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				F650B36A22B9ED5000E2D323 /* PostListViewController.swift */,
+				F6C054E222BBB718001104AD /* PostDetailViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -231,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				F6D148C222BA3829006A9C13 /* PostListViewModel.swift */,
+				F6C054E422BBB892001104AD /* PostDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -276,6 +293,7 @@
 			buildConfigurationList = F650B37722B9ED5200E2D323 /* Build configuration list for PBXNativeTarget "PracticeMakesPerfect" */;
 			buildPhases = (
 				9718893414975C763A1BDFD2 /* [CP] Check Pods Manifest.lock */,
+				F6C054E622BBBF57001104AD /* Run R.Swift */,
 				F650B36122B9ED5000E2D323 /* Sources */,
 				F650B36222B9ED5000E2D323 /* Frameworks */,
 				F650B36322B9ED5000E2D323 /* Resources */,
@@ -377,6 +395,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F6C054E622BBBF57001104AD /* Run R.Swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = "Run R.Swift";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -385,18 +423,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6C054E122BB91D0001104AD /* PostsRealmStorage.swift in Sources */,
+				F6C054E322BBB718001104AD /* PostDetailViewController.swift in Sources */,
 				F6C054DA22BB7FAD001104AD /* PostApiImpl.swift in Sources */,
 				F650B36B22B9ED5000E2D323 /* PostListViewController.swift in Sources */,
 				F6D148C022BA32A1006A9C13 /* PostCollectionViewCell.swift in Sources */,
 				F6C054DC22BB8146001104AD /* PostResponse.swift in Sources */,
 				F6B0DC9022BA7DBB00E980CF /* PracticeMakesPerfectApiClient.swift in Sources */,
 				F6C054DF22BB8B1A001104AD /* RealmStorage.swift in Sources */,
+				F6C054EB22BBC449001104AD /* R.generated.swift in Sources */,
 				F6D148C322BA3829006A9C13 /* PostListViewModel.swift in Sources */,
 				F6D148CD22BA3A46006A9C13 /* DisplayPosts.swift in Sources */,
 				F6D148CA22BA39D0006A9C13 /* Post.swift in Sources */,
 				F6B0DC8A22BA466C00E980CF /* SwinjectStoryboard+Setup.swift in Sources */,
 				F650B36922B9ED5000E2D323 /* AppDelegate.swift in Sources */,
 				F6D148C722BA38A7006A9C13 /* PostViewParam.swift in Sources */,
+				F6C054E522BBB892001104AD /* PostDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

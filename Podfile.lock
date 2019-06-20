@@ -2,6 +2,8 @@ PODS:
   - Alamofire (4.8.2)
   - Kingfisher (5.6.0)
   - ObjectMapper (3.5.0)
+  - R.swift (5.0.3):
+    - R.swift.Library (~> 5.0.0)
   - R.swift.Library (5.0.1)
   - Realm (3.16.2):
     - Realm/Headers (= 3.16.2)
@@ -31,6 +33,7 @@ PODS:
 DEPENDENCIES:
   - Kingfisher (= 5.6.0)
   - ObjectMapper (= 3.5.0)
+  - R.swift (= 5.0.3)
   - RealmSwift (= 3.16.2)
   - Reveal-SDK
   - RxAlamofire (= 5.0.0)
@@ -46,6 +49,7 @@ SPEC REPOS:
     - Alamofire
     - Kingfisher
     - ObjectMapper
+    - R.swift
     - R.swift.Library
     - Realm
     - RealmSwift
@@ -61,6 +65,7 @@ SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   Kingfisher: 1a50df6880a60bae26f3e21a0df3d17b892f5e0b
   ObjectMapper: 078b564ed25c6578b62588e306bf1da3924636d4
+  R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
   R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
   Realm: 0e73b4edeb5b6a90da3d83206883b2e34e00eb38
   RealmSwift: a81e650171ef0a5f999df1ed8d39ba8d6fce88a4
@@ -72,6 +77,6 @@ SPEC CHECKSUMS:
   Swinject: b624462f47b635a64f89a60a247baa5fccec14e1
   SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
 
-PODFILE CHECKSUM: 79c91d26da7a8d3e35549a7a34bc312a14fb2c77
+PODFILE CHECKSUM: d29614692a2499d7de11044f4d38a608698d09e5
 
 COCOAPODS: 1.7.2

@@ -16,6 +16,8 @@ class PostViewParam {
     var body = ""
     var image = URL(string: "")
     
+    init() {}
+    
     init(id: Int, userId: Int, title: String, body: String, image: URL) {
         self.id = id
         self.userId = userId

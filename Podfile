@@ -8,6 +8,7 @@ target 'PracticeMakesPerfect' do
   # Pods for PracticeMakesPerfect
   pod 'RealmSwift', '3.16.2'
   
+  pod 'R.swift', '5.0.3'
   pod 'SegueManager', '4.0.0'
   pod 'SegueManager/R.swift', '4.0.0'
   

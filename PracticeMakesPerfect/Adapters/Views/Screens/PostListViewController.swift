@@ -8,15 +8,25 @@
 
 import UIKit
 import RxSwift
+import SegueManager
 
-
-class PostListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class PostListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, SeguePerformer {
     
     @IBOutlet weak var postListCollectionView: UICollectionView!
     
     private let disposeBag = DisposeBag()
     
     var postListViewModel: PostListViewModel!
+    
+    override func viewDidLoad() {
+        setupPostListViewModel()
+        
+        initSegueManagerObject()
+        registerCollectionViewCellNib()
+        postListViewModel.viewLoad()
+    }
+
+    // MARK: - CollectionView
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: UIScreen.main.bounds.width, height: 200)
@@ -33,15 +43,38 @@ class PostListViewController: UIViewController, UICollectionViewDataSource, UICo
         return postListCollectionViewCell
     }
     
-    override func viewDidLoad() {
-        setupPostListViewModel()
-        
-        registerCollectionViewCellNib()
-        postListViewModel.viewLoad()
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        openPost(postViewParam: postListViewModel.postViewParams[indexPath.row])
     }
     
+    // MARK: - Segue
+    
+    private var segueManagerObject: SegueManager?
+    
+    var segueManager: SegueManager {
+        guard let segueManagerObject = segueManagerObject else { return SegueManager(viewController: UIViewController()) }
+        return segueManagerObject
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        segueManager.prepare(for: segue)
+    }
+    
+    private func initSegueManagerObject() {
+        segueManagerObject = SegueManager(viewController: self)
+    }
+
+    private func openPost(postViewParam: PostViewParam) {
+        performSegue(withIdentifier: R.segue.postListViewController.showPost) { segue in
+            let destinationViewController = segue.destination
+            destinationViewController.postDetailViewModel.postViewParam = postViewParam
+        }
+    }
+    
+    // MARK: - Private
+
     private func registerCollectionViewCellNib() {
-        let nib = UINib(nibName: "PostCollectionViewCell", bundle: nil)
+        let nib = UINib(resource: R.nib.postCollectionViewCell)
         postListCollectionView.register(nib, forCellWithReuseIdentifier: "PostListCollectionViewCell")
     }
     
@@ -50,8 +83,7 @@ class PostListViewController: UIViewController, UICollectionViewDataSource, UICo
             .subscribe(onNext: { [weak self] in
                 guard let weakSelf = self else { return }
                 weakSelf.postListCollectionView.reloadData()
-        }).disposed(by: disposeBag)
+            }).disposed(by: disposeBag)
     }
-    
 }
 
