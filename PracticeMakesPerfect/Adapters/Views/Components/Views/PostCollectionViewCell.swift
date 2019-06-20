@@ -6,10 +6,13 @@
 //  Copyright © 2019 jimmy. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import Kingfisher
 
 class PostCollectionViewCell: UICollectionViewCell {
+    
+ 
     
     @IBOutlet weak var pictureImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!

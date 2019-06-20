@@ -15,6 +15,7 @@
 		F650B37322B9ED5200E2D323 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F650B37122B9ED5200E2D323 /* LaunchScreen.storyboard */; };
 		F6B0DC8A22BA466C00E980CF /* SwinjectStoryboard+Setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B0DC8922BA466C00E980CF /* SwinjectStoryboard+Setup.swift */; };
 		F6B0DC8D22BA4E2400E980CF /* PostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6B0DC8C22BA4E2400E980CF /* PostCollectionViewCell.xib */; };
+		F6B0DC9022BA7DBB00E980CF /* PracticeMakesPerfectApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B0DC8F22BA7DBB00E980CF /* PracticeMakesPerfectApiClient.swift */; };
 		F6D148C022BA32A1006A9C13 /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D148BF22BA32A1006A9C13 /* PostCollectionViewCell.swift */; };
 		F6D148C322BA3829006A9C13 /* PostListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D148C222BA3829006A9C13 /* PostListViewModel.swift */; };
 		F6D148C722BA38A7006A9C13 /* PostViewParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D148C622BA38A7006A9C13 /* PostViewParam.swift */; };
@@ -35,6 +36,7 @@
 		F650B37422B9ED5200E2D323 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6B0DC8922BA466C00E980CF /* SwinjectStoryboard+Setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+Setup.swift"; sourceTree = "<group>"; };
 		F6B0DC8C22BA4E2400E980CF /* PostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCollectionViewCell.xib; sourceTree = "<group>"; };
+		F6B0DC8F22BA7DBB00E980CF /* PracticeMakesPerfectApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeMakesPerfectApiClient.swift; sourceTree = "<group>"; };
 		F6D148BF22BA32A1006A9C13 /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
 		F6D148C222BA3829006A9C13 /* PostListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewModel.swift; sourceTree = "<group>"; };
 		F6D148C622BA38A7006A9C13 /* PostViewParam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewParam.swift; sourceTree = "<group>"; };
@@ -112,6 +114,30 @@
 			path = Xibs;
 			sourceTree = "<group>";
 		};
+		F6B0DC8E22BA7DA100E980CF /* ApiServices */ = {
+			isa = PBXGroup;
+			children = (
+				F6B0DC8F22BA7DBB00E980CF /* PracticeMakesPerfectApiClient.swift */,
+				F6B0DC9222BA7DE400E980CF /* Services */,
+				F6B0DC9122BA7DD600E980CF /* Responses */,
+			);
+			path = ApiServices;
+			sourceTree = "<group>";
+		};
+		F6B0DC9122BA7DD600E980CF /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		F6B0DC9222BA7DE400E980CF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		F6D148B722BA24D7006A9C13 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +167,7 @@
 		F6D148BA22BA28F5006A9C13 /* Adapters */ = {
 			isa = PBXGroup;
 			children = (
+				F6B0DC8E22BA7DA100E980CF /* ApiServices */,
 				F6D148C122BA3809006A9C13 /* ViewModels */,
 				F6D148BB22BA2906006A9C13 /* Views */,
 			);
@@ -339,6 +366,7 @@
 			files = (
 				F650B36B22B9ED5000E2D323 /* PostListViewController.swift in Sources */,
 				F6D148C022BA32A1006A9C13 /* PostCollectionViewCell.swift in Sources */,
+				F6B0DC9022BA7DBB00E980CF /* PracticeMakesPerfectApiClient.swift in Sources */,
 				F6D148C322BA3829006A9C13 /* PostListViewModel.swift in Sources */,
 				F6D148CD22BA3A46006A9C13 /* DisplayPosts.swift in Sources */,
 				F6D148CA22BA39D0006A9C13 /* Post.swift in Sources */,

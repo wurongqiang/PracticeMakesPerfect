@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 
+
 class PostListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var postListCollectionView: UICollectionView!
