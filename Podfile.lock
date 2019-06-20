@@ -28,16 +28,16 @@ PODS:
     - Swinject (~> 2.6)
 
 DEPENDENCIES:
-  - Kingfisher
-  - ObjectMapper
-  - RealmSwift
-  - RxAlamofire
-  - RxSwift
-  - SegueManager
-  - SegueManager/R.swift
-  - SwiftDate
-  - Swinject
-  - SwinjectStoryboard
+  - Kingfisher (= 5.6.0)
+  - ObjectMapper (= 3.5.0)
+  - RealmSwift (= 3.16.2)
+  - RxAlamofire (= 5.0.0)
+  - RxSwift (= 5.0.0)
+  - SegueManager (= 4.0.0)
+  - SegueManager/R.swift (= 4.0.0)
+  - SwiftDate (= 6.0.3)
+  - Swinject (= 2.6.1)
+  - SwinjectStoryboard (= 2.2.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -68,6 +68,6 @@ SPEC CHECKSUMS:
   Swinject: b624462f47b635a64f89a60a247baa5fccec14e1
   SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
 
-PODFILE CHECKSUM: ebb53893e30f2cf9e4be88540a28e6b99ffaef8d
+PODFILE CHECKSUM: c16f94b8c27aa82b5b52b43b096c394cda6e8ffc
 
 COCOAPODS: 1.7.2

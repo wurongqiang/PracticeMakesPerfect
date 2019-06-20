@@ -24,7 +24,7 @@ class PracticeMakesPerfectApiClientImpl: PracticeMakesPerfectApiClient {
         
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
-//        let manager = SessionManager.default
+        let manager = SessionManager.default
         
         return .never()
     }
