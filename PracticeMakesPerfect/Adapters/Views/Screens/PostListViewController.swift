@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import SegueManager
 
-class PostListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, SeguePerformer {
+class PostListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, PostListViewModelProtocol, SeguePerformer {
     
     @IBOutlet weak var postListCollectionView: UICollectionView!
     
@@ -71,6 +71,12 @@ class PostListViewController: UIViewController, UICollectionViewDataSource, UICo
         }
     }
     
+    // MARK: - PostListViewModel
+    
+    func delegatePostsLoaded() {
+        print("POSTS LOADED")
+    }
+    
     // MARK: - Private
 
     private func registerCollectionViewCellNib() {
@@ -79,7 +85,8 @@ class PostListViewController: UIViewController, UICollectionViewDataSource, UICo
     }
     
     private func setupPostListViewModel() {
-        postListViewModel.rxEventPostsLoaded
+            postListViewModel.delegate = self
+            postListViewModel.rxEventPostsLoaded
             .subscribe(onNext: { [weak self] in
                 guard let weakSelf = self else { return }
                 weakSelf.postListCollectionView.reloadData()

@@ -9,11 +9,17 @@
 import Foundation
 import RxSwift
 
+protocol PostListViewModelProtocol: class {
+    func delegatePostsLoaded()
+}
+
 class PostListViewModel {
     
     private let displayPosts: DisplayPosts
     private let disposeBag = DisposeBag()
     private (set) var postViewParams = [PostViewParam]()
+    
+    weak var delegate: PostListViewModelProtocol?
     
     private let eventPostsLoaded = PublishSubject<Void>()
     
@@ -33,6 +39,7 @@ class PostListViewModel {
         displayPosts.getPosts().subscribe(onNext: { [weak self] posts in
             guard let weakSelf = self else { return }
             weakSelf.postViewParams = posts
+            weakSelf.delegate?.delegatePostsLoaded()
             weakSelf.eventPostsLoaded.onNext(())
         }).disposed(by: disposeBag)
     }
