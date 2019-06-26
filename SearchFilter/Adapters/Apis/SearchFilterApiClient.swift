@@ -1,7 +1,7 @@
 
 //
-//  PracticeMakesPerfectClient.swift
-//  PracticeMakesPerfect
+//  SearchFilterClient.swift
+//  SearchFilter
 //
 //  Created by Jimmy Wu on 19/06/19.
 //  Copyright © 2019 jimmy. All rights reserved.
@@ -13,21 +13,21 @@ import Alamofire
 import RxAlamofire
 
 
-protocol PracticeMakesPerfectApiClient {
-    func getString(path: String, headers: [String: String]) -> Observable<(Bool, String)>
+protocol SearchFilterApiClient {
+    func getString(path: String, parameters: [String: Any], headers: [String: String]) -> Observable<(Bool, String)>
 }
 
-class PracticeMakesPerfectApiClientImpl: PracticeMakesPerfectApiClient {
+class SearchFilterApiClientImpl: SearchFilterApiClient {
     
-    private let host = "https://gorest.co.in/public-api/"
+    private let host = "https://ace.tokopedia.com/search/v2.5/"
     
-    func getString(path: String, headers: [String : String]) -> Observable<(Bool, String)> {
+    func getString(path: String, parameters: [String: Any], headers: [String: String]) -> Observable<(Bool, String)> {
         
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
         let manager = SessionManager.default
         
-        return manager.rx.request(.get, createURL(path: path), headers: populateHeaders(dict: headers))
+        return manager.rx.request(.get, createURL(path: path), parameters: parameters, headers: populateHeaders(dict: headers))
             .flatMap { alamofireRequest in
                 alamofireRequest.rx.responseString()
             }
@@ -52,7 +52,7 @@ class PracticeMakesPerfectApiClientImpl: PracticeMakesPerfectApiClient {
     private func populateHeaders(
         dict: [String:String]? = nil) -> [String:String] {
         var headers = [String:String]()
-        headers["Authorization"] = "Bearer wlQqC4R2In_tUdl-hPnMNyYbDyvOrn9xb0iW"
+        headers["Authorization"] = ""
         
         if let dict = dict {
             for (k, v) in dict where !k.isEmpty {

@@ -1,6 +1,6 @@
 //
 //  SwinjectStoryboard+Setup.swift
-//  PracticeMakesPerfect
+//  SearchFilter
 //
 //  Created by Jimmy Wu on 19/06/19.
 //  Copyright © 2019 jimmy. All rights reserved.
@@ -28,44 +28,36 @@ extension SwinjectStoryboard {
     }
     
     private class func registerStoryboards() {
-        defaultContainer.storyboardInitCompleted(PostListViewController.self) { r, c in
-            c.postListViewModel = r.resolve(PostListViewModel.self)!
-        }
-        
-        defaultContainer.storyboardInitCompleted(PostDetailViewController.self) { r, c in
-            c.postDetailViewModel = r.resolve(PostDetailViewModel.self)!
+        defaultContainer.storyboardInitCompleted(ProductListViewController.self) { r, c in
+            c.productListViewModel = r.resolve(ProductListViewModel.self)!
         }
     }
     
     private class func registerViewModels() {
-        defaultContainer.register(PostListViewModel.self) { r in
-            PostListViewModel(displayPosts: r.resolve(DisplayPosts.self)!)
-        }
-        
-        defaultContainer.register(PostDetailViewModel.self) { r in
-            PostDetailViewModel()
+        defaultContainer.register(ProductListViewModel.self) { r in
+            ProductListViewModel(displayProducts: r.resolve(DisplayProducts.self)!)
         }
     }
     
     private class func registerInteractors() {
-        defaultContainer.register(DisplayPosts.self) { r in
-            DisplayPostsImpl(postApi: r.resolve(PostApi.self)!, postStorage: r.resolve(PostsStorage.self)!)
+        defaultContainer.register(DisplayProducts.self) { r in
+            DisplayProductsImpl(productApi: r.resolve(ProductApi.self)!, productStorage: r.resolve(ProductsStorage.self)!)
         }
     }
     
     private class func registerApis() {
-        defaultContainer.register(PracticeMakesPerfectApiClient.self) { r in
-            PracticeMakesPerfectApiClientImpl()
+        defaultContainer.register(SearchFilterApiClient.self) { r in
+            SearchFilterApiClientImpl()
         }
         
-        defaultContainer.register(PostApi.self) { r in
-            PostApiImpl(practiceMakesPerfectApiClient: r.resolve(PracticeMakesPerfectApiClient.self)!)
+        defaultContainer.register(ProductApi.self) { r in
+            ProductApiImpl(practiceMakesPerfectApiClient: r.resolve(SearchFilterApiClient.self)!)
         }
     }
     
     private class func registerStorages() {
-        defaultContainer.register(PostsStorage.self) { r in
-            PostsRealmStorage()
+        defaultContainer.register(ProductsStorage.self) { r in
+            ProductsRealmStorage()
         }
     }
     

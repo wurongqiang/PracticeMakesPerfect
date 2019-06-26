@@ -1,6 +1,6 @@
 //
-//  PostsRealmStore.swift
-//  PracticeMakesPerfect
+//  ProductsRealmStore.swift
+//  SearchFilter
 //
 //  Created by Jimmy Wu on 20/06/19.
 //  Copyright © 2019 jimmy. All rights reserved.
@@ -9,22 +9,22 @@
 import Foundation
 import RealmSwift
 
-protocol PostsStorage {
-    func save(posts: [Post])
-    func getPosts() -> [Post]
+protocol ProductsStorage {
+    func save(products: [Product])
+    func getProducts() -> [Product]
     func write(writeBlock: () -> Void)
 }
 
-class PostsRealmStorage: RealmStorage, PostsStorage {
+class ProductsRealmStorage: RealmStorage, ProductsStorage {
 
-    func save(posts: [Post]) {
+    func save(products: [Product]) {
         try! realm.write {
-            realm.add(posts, update: .modified)
+            realm.add(products, update: .modified)
         }
     }
     
-    func getPosts() -> [Post] {
-        return Array(realm.objects(Post.self))
+    func getProducts() -> [Product] {
+        return Array(realm.objects(Product.self))
     }
     
     func write(writeBlock: () -> Void) {
