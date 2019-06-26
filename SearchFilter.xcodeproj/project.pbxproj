@@ -34,7 +34,7 @@
 		14DB7EFA9BBF8B5651D70493 /* Pods_PracticeMakesPerfect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PracticeMakesPerfect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		49CFDA4CA5D5B7B34B098588 /* Pods-PracticeMakesPerfect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeMakesPerfect.release.xcconfig"; path = "Target Support Files/Pods-PracticeMakesPerfect/Pods-PracticeMakesPerfect.release.xcconfig"; sourceTree = "<group>"; };
 		F5DF620E47CA6335EDAA65A1 /* Pods-PracticeMakesPerfect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PracticeMakesPerfect.debug.xcconfig"; path = "Target Support Files/Pods-PracticeMakesPerfect/Pods-PracticeMakesPerfect.debug.xcconfig"; sourceTree = "<group>"; };
-		F650B36522B9ED5000E2D323 /* PracticeMakesPerfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticeMakesPerfect.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F650B36522B9ED5000E2D323 /* SearchFilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchFilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F650B36822B9ED5000E2D323 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F650B36A22B9ED5000E2D323 /* PostListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewController.swift; sourceTree = "<group>"; };
 		F650B36D22B9ED5000E2D323 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 		F650B35C22B9ED5000E2D323 = {
 			isa = PBXGroup;
 			children = (
-				F650B36722B9ED5000E2D323 /* PracticeMakesPerfect */,
+				F650B36722B9ED5000E2D323 /* SearchFilter */,
 				F650B36622B9ED5000E2D323 /* Products */,
 				1EF87FACEB6922233D0D8155 /* Pods */,
 				A1719F0CFFE5F669C4D17E22 /* Frameworks */,
@@ -100,12 +100,12 @@
 		F650B36622B9ED5000E2D323 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F650B36522B9ED5000E2D323 /* PracticeMakesPerfect.app */,
+				F650B36522B9ED5000E2D323 /* SearchFilter.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F650B36722B9ED5000E2D323 /* PracticeMakesPerfect */ = {
+		F650B36722B9ED5000E2D323 /* SearchFilter */ = {
 			isa = PBXGroup;
 			children = (
 				F650B37422B9ED5200E2D323 /* Info.plist */,
@@ -118,7 +118,7 @@
 				F6D148C822BA39B9006A9C13 /* Entities */,
 				F6C054E922BBC3DD001104AD /* Libraries */,
 			);
-			path = PracticeMakesPerfect;
+			path = SearchFilter;
 			sourceTree = "<group>";
 		};
 		F6B0DC8B22BA4E0700E980CF /* Xibs */ = {
@@ -288,9 +288,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F650B36422B9ED5000E2D323 /* PracticeMakesPerfect */ = {
+		F650B36422B9ED5000E2D323 /* SearchFilter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F650B37722B9ED5200E2D323 /* Build configuration list for PBXNativeTarget "PracticeMakesPerfect" */;
+			buildConfigurationList = F650B37722B9ED5200E2D323 /* Build configuration list for PBXNativeTarget "SearchFilter" */;
 			buildPhases = (
 				9718893414975C763A1BDFD2 /* [CP] Check Pods Manifest.lock */,
 				F6C054E622BBBF57001104AD /* Run R.Swift */,
@@ -303,9 +303,9 @@
 			);
 			dependencies = (
 			);
-			name = PracticeMakesPerfect;
+			name = SearchFilter;
 			productName = PracticeMakesPerfect;
-			productReference = F650B36522B9ED5000E2D323 /* PracticeMakesPerfect.app */;
+			productReference = F650B36522B9ED5000E2D323 /* SearchFilter.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -323,7 +323,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F650B36022B9ED5000E2D323 /* Build configuration list for PBXProject "PracticeMakesPerfect" */;
+			buildConfigurationList = F650B36022B9ED5000E2D323 /* Build configuration list for PBXProject "SearchFilter" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -336,7 +336,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F650B36422B9ED5000E2D323 /* PracticeMakesPerfect */,
+				F650B36422B9ED5000E2D323 /* SearchFilter */,
 			);
 		};
 /* End PBXProject section */
@@ -586,12 +586,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 62FAAQSNV3;
-				INFOPLIST_FILE = PracticeMakesPerfect/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SearchFilter/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.PracticeMakesPerfect;
+				PRODUCT_BUNDLE_IDENTIFIER = com.searchfilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -605,12 +605,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 62FAAQSNV3;
-				INFOPLIST_FILE = PracticeMakesPerfect/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SearchFilter/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.PracticeMakesPerfect;
+				PRODUCT_BUNDLE_IDENTIFIER = com.searchfilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -620,7 +620,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F650B36022B9ED5000E2D323 /* Build configuration list for PBXProject "PracticeMakesPerfect" */ = {
+		F650B36022B9ED5000E2D323 /* Build configuration list for PBXProject "SearchFilter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F650B37522B9ED5200E2D323 /* Debug */,
@@ -629,7 +629,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F650B37722B9ED5200E2D323 /* Build configuration list for PBXNativeTarget "PracticeMakesPerfect" */ = {
+		F650B37722B9ED5200E2D323 /* Build configuration list for PBXNativeTarget "SearchFilter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F650B37822B9ED5200E2D323 /* Debug */,
